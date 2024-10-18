@@ -1,78 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
-  	
-  	<link rel="stylesheet"  href="./index.css" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&display=swap" />
-  	
-  	
-  	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginpage.css">
+    <script src="data.js" defer></script>
+    <title>Student Mentor Application - Login</title>
 </head>
 <body>
-  	
-  	<div class="login">
-    		<img class="vector-icon" alt="" src="Vector.svg">
-    		
-    		<img class="vector-icon1" alt="" src="Vector.svg">
-    		
-    		<img class="vector-icon2" alt="" src="Vector.svg">
-    		
-    		<img class="vector-icon3" alt="" src="Vector.svg">
-    		
-    		<img class="vector-icon4" alt="" src="Vector.svg">
-    		
-    		<img class="vector-icon5" alt="" src="Vector.svg">
-    		
-    		<div class="login-child">
-    		</div>
-    		<div class="frame-parent">
-      			<div class="frame-group">
-        				<div class="frame-container">
-          					<div class="login-parent">
-            						<b class="username">Login</b>
-            						<div class="enter-your-account">Enter your account details</div>
-          					</div>
-          					<div class="frame-div">
-            						<div class="username-parent">
-              							<div class="username">Username</div>
-              							<div class="frame-child">
-              							</div>
-            						</div>
-            						<div class="username-parent">
-              							<div class="password-parent">
-                								<div class="username">Password</div>
-                								<img class="eyeslashfill-icon" alt="" src="EyeSlashFill.svg">
-                								
-              							</div>
-              							<div class="frame-child">
-              							</div>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="forgot-password">Forgot Password?</div>
-      			</div>
-      			<div class="login-wrapper">
-        				<div class="username">Login</div>
-      			</div>
-    		</div>
-    		<div class="welcome-to-student-portal-parent">
-      			<div class="welcome-to-student-container">
-        				<p class="welcome-to">
-          					<b>Welcome to </b>
-        				</p>
-        				<p class="welcome-to">student portal</p>
-      			</div>
-      			<div class="login-to-access">Login to access your account</div>
-    		</div>
-    		<img class="copy-1-icon" alt="" src="招聘矢量插画人物场景插画招聘1100924黑与白-01 copy 1.png">
-    		
-  	</div>
-  	
-  	
-  	
-  	
+    <div class="login-container">
+        <div class="logo-container">
+            <img src="https://th.bing.com/th/id/R.bc230718566100e68074fc8d27724eed?rik=keRTD29HCJ2Rjg&riu=http%3a%2f%2fadministration.sliet.ac.in%2ffiles%2f2014%2f08%2fBlue.jpg&ehk=R7THNgoYdxrudeET0uZ2I0Y9PJf652jP6j%2b%2bbjeI01c%3d&risl=&pid=ImgRaw&r=0" alt="College Logo" class="logo">
+            <h2>Sant Longowal Institute of Engineering and Technology</h2>
+        </div>
+
+        <div class="login-form">
+            <h1>Login</h1>
+            <p>Enter your account details</p>
+
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <button class="login-button" onclick="handleLogin()">Login</button>
+        </div>
+
+        <div class="welcome-message">
+            <p><b>Welcome to </b> student portal</p>
+            <p>Login to access your account</p>
+        </div>
+    </div>
+
+    <script>
+        function handleLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const result = validateLogin(username, password);
+
+            if (result) {
+                alert(`Welcome, ${result.user.username}! You are logged in as a ${result.role}.`);
+                // Redirect based on role
+                if (result.role === "student") {
+                    window.location.href = "student-dashboard.html";
+                } else {
+                    window.location.href = "mentor-dashboard.html";
+                }
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    </script>
 </body>
 </html>
