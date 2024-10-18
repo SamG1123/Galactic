@@ -1,206 +1,55 @@
-<html></html>
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
-    />
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./prelogin.css">
     <title>Student Mentor Application</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    
+</head>
+<body>
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  </head>
-  <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-[#F9FAFA] group/design-root overflow-x-hidden" style='font-family: Lexend, "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#EEEFF2] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#1C1D22]">
-            <div class="size-4">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </div>
-            <h2 class="text-[#1C1D22] text-lg font-bold leading-tight tracking-[-0.015em]">Mentorship &amp; Learning</h2>
-          </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-              <a class="text-[#1C1D22] text-sm font-medium leading-normal" href="#">Home</a>
-              <a class="text-[#1C1D22] text-sm font-medium leading-normal" href="#">Faculty Profiles</a>
-              <a class="text-[#1C1D22] text-sm font-medium leading-normal" href="#">About</a>
-              <a class="text-[#1C1D22] text-sm font-medium leading-normal" href="#">Contact</a>
-            </div>
-            <div class="flex gap-2">
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#607AFB] text-[#F9FAFA] text-sm font-bold leading-normal tracking-[0.015em]"
-              >
-                <span class="truncate">Log in</span>
-              </button>
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#EEEFF2] text-[#1C1D22] text-sm font-bold leading-normal tracking-[0.015em]"
-              >
-                <span class="truncate">Sign up</span>
-              </button>
-            </div>
-          </div>
-        </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="@container">
-              <div class="@[480px]:p-4">
-                <div
-                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10"
-                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://cdn.usegalileo.ai/sdxl10/7ef9d74b-d2dd-40b6-b44e-b0dd19c24fca.png");'
-                >
-                  <h1
-                    class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] text-center"
-                  >
-                    Empowering Students with Expert Guidance
-                  </h1>
-                  <label class="flex flex-col min-w-40 h-14 w-full max-w-[480px] @[480px]:h-16">
-                    <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
-                      <div
-                        class="text-[#3C3F4A] flex border border-[#D5D6DD] bg-[#FFFFFF] items-center justify-center pl-[15px] rounded-l-xl border-r-0"
-                        data-icon="MagnifyingGlass"
-                        data-size="20px"
-                        data-weight="regular"
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                          <path
-                            d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <h2 class="text-[#1C1D22] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Why Mentorship?</h2>
-            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-              <div class="flex flex-1 gap-3 rounded-lg border border-[#D5D6DD] bg-[#FFFFFF] p-4 flex-col">
-                <div class="text-[#1C1D22]" data-icon="Users" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="flex flex-col gap-1">
-                  <h2 class="text-[#1C1D22] text-base font-bold leading-tight">Personalized guidance from experts</h2>
-                  <p class="text-[#3C3F4A] text-sm font-normal leading-normal">Connect with professionals who understand your unique goals and challenges</p>
-                </div>
-              </div>
-              <div class="flex flex-1 gap-3 rounded-lg border border-[#D5D6DD] bg-[#FFFFFF] p-4 flex-col">
-                <div class="text-[#1C1D22]" data-icon="Copy" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="flex flex-col gap-1">
-                  <h2 class="text-[#1C1D22] text-base font-bold leading-tight">Career advice and skill development</h2>
-                  <p class="text-[#3C3F4A] text-sm font-normal leading-normal">Get help with job applications, interview preparation, or building a portfolio</p>
-                </div>
-              </div>
-              <div class="flex flex-1 gap-3 rounded-lg border border-[#D5D6DD] bg-[#FFFFFF] p-4 flex-col">
-                <div class="text-[#1C1D22]" data-icon="Lightbulb" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="flex flex-col gap-1">
-                  <h2 class="text-[#1C1D22] text-base font-bold leading-tight">Inspiration and motivation</h2>
-                  <p class="text-[#3C3F4A] text-sm font-normal leading-normal">Learn from others' experiences and discover new ways of thinking</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex px-4 py-3 justify-center">
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-[#607AFB] text-[#F9FAFA] text-base font-bold leading-normal tracking-[0.015em]"
-                onclick="window.location.href='http://cs.sliet.ac.in/faculty-staff/';"
-              >
-                <span class="truncate">Explore Faculty Profiles</span>
-              </button>
-            </div>
-            <div class="flex flex-col gap-10 px-4 py-10 @container">
-              <div class="flex flex-col gap-4">
-                <h1
-                  class="text-[#1C1D22] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]"
-                >
-                  Why Mentorship?
-                </h1>
-                <p class="text-[#1C1D22] text-base font-normal leading-normal max-w-[720px]">
-                  Whether you're a student, recent graduate, or someone looking to make a career change, mentorship can be an invaluable resource. Here are some of the key
-                  benefits:
-                </p>
-              </div>
-              <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3">
-                <div class="flex flex-col gap-3 pb-3">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                    style='background-image: url("https://cdn.usegalileo.ai/sdxl10/969c0212-83d4-488f-a38a-8bdcb51241dc.png");'
-                  ></div>
-                  <div>
-                    <p class="text-[#1C1D22] text-base font-medium leading-normal">Personalized guidance from experts</p>
-                    <p class="text-[#3C3F4A] text-sm font-normal leading-normal">Connect with professionals who understand your unique goals and challenges</p>
-                  </div>
-                </div>
-                <div class="flex flex-col gap-3 pb-3">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                    style='background-image: url("https://cdn.usegalileo.ai/sdxl10/0576dbb3-077b-4493-b15b-aadbf845eab0.png");'
-                  ></div>
-                  <div>
-                    <p class="text-[#1C1D22] text-base font-medium leading-normal">Career advice and skill development</p>
-                    <p class="text-[#3C3F4A] text-sm font-normal leading-normal">Get help with job applications, interview preparation, or building a portfolio</p>
-                  </div>
-                </div>
-                <div class="flex flex-col gap-3 pb-3">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                    style='background-image: url("https://cdn.usegalileo.ai/sdxl10/ff336893-85bf-49cd-a797-090a59663803.png");'
-                  ></div>
-                  <div>
-                    <p class="text-[#1C1D22] text-base font-medium leading-normal">Inspiration and motivation</p>
-                    <p class="text-[#3C3F4A] text-sm font-normal leading-normal">Learn from others' experiences and discover new ways of thinking</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="@container">
-              <div class="flex flex-col justify-end gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
-                <div class="flex flex-col gap-2 text-center">
-                  <h1
-                    class="text-[#1C1D22] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]"
-                  >
-                    Ready to find your mentor?
-                  </h1>
-                </div>
-                <div class="flex flex-1 justify-center">
-                  <div class="flex justify-center">
-                    <button
-                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#607AFB] text-[#F9FAFA] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow"
-                    >
-                      <span class="truncate">Sign up</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
+    <header>
+        <div>
+            <h2>Mentorship & Learning</h2>
         </div>
-      </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Faculty Profiles</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+        <button>Log in</button>
+    </header>
+
+
+    <div class="main-section">
+        <h1>Empowering Students with Expert Guidance</h1>
+        <div class="search-box">
+            <input type="text" placeholder="Search for mentors...">
+            <button>Search</button>
+        </div>
+        
+        <div class="cta-button">
+            <button onclick="window.location.href='http://cs.sliet.ac.in/faculty-staff/';">Explore Faculty Profiles</button>
+        </div>
     </div>
-  </body>
+
+    <div class="info-sections">
+        <div class="info-box">
+            <h3>Personalized Guidance</h3>
+            <p>Connect with professionals who understand your unique goals and challenges.</p>
+        </div>
+        <div class="info-box">
+            <h3>Career Advice</h3>
+            <p>Get help with job applications, interview preparation, or building a portfolio.</p>
+        </div>
+        <div class="info-box">
+            <h3>Inspiration and Motivation</h3>
+            <p>Learn from others' experiences and discover new ways of thinking.</p>
+        </div>
+    </div>
+
+</body>
 </html>

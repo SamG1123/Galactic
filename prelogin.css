@@ -1,0 +1,145 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F9FAFA;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: white;
+            border-bottom: 1px solid #EEEFF2;
+        }
+
+        header h2 {
+            font-size: 1.5rem;
+            color: #1C1D22;
+            margin: 0;
+        }
+
+        header nav a {
+            margin-right: 30px;
+            color: #1C1D22;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        header button {
+            background-color: #607AFB;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        header button:hover {
+            background-color: #4A64D9;
+        }
+
+      
+        .main-section {
+            text-align: center;
+            padding: 50px 0;
+            background-image: url('https://cdn.usegalileo.ai/sdxl10/7ef9d74b-d2dd-40b6-b44e-b0dd19c24fca.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            min-height: 400px;
+        }
+
+        .main-section h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .search-box {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-box input {
+            width: 300px;
+            padding: 10px;
+            border-radius: 8px 0 0 8px;
+            border: 1px solid #D5D6DD;
+        }
+
+        .search-box button {
+            padding: 10px 20px;
+            background-color: #607AFB;
+            color: white;
+            border: none;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+        }
+
+        .search-box button:hover {
+            background-color: #4A64D9;
+        }
+
+      
+        .cta-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .cta-button button {
+            background-color: #607AFB;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .cta-button button:hover {
+            background-color: #4A64D9;
+        }
+
+   
+        .info-sections {
+            padding: 40px 10px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .info-box {
+            background-color: white;
+            border: 1px solid #D5D6DD;
+            border-radius: 8px;
+            padding: 20px;
+            width: 280px;
+            margin: 15px;
+        }
+
+        .info-box h3 {
+            color: #1C1D22;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            color: #3C3F4A;
+        }
+
+   
+        @media (max-width: 768px) {
+            .info-box {
+                width: 90%;
+            }
+
+            .main-section h1 {
+                font-size: 2rem;
+            }
+        }
