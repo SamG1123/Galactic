@@ -1,71 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tasks</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Tasks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: #1d8cd7;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .content {
+      padding: 20px;
+    }
+    .task-item {
+      background-color: white;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    button {
+      background-color: #1d8cd7;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #155a8a;
+    }
+  </style>
 </head>
-<body class="bg-gray-100">
-
-  <!-- Header -->
-  <header class="bg-blue-700 p-4 text-white">
-    <h1 class="text-xl font-bold">Tasks</h1>
+<body>
+  <header class="header">
+    <h1>All Tasks</h1>
   </header>
-
-  <!-- Main Content -->
-  <main class="p-6">
-    <div class="bg-white p-6 rounded-lg shadow-lg">
-      <!-- Task List -->
-      <h2 class="text-2xl font-semibold mb-4">Pending Tasks</h2>
-      <ul class="space-y-4">
-        <!-- Task Item -->
-        <li class="bg-gray-100 p-4 rounded-lg shadow">
-          <div class="flex justify-between items-center">
-            <div>
-              <p><strong>Task:</strong> Review assignment from Sarah</p>
-              <p><strong>Due Date:</strong> Oct 22, 2024</p>
-            </div>
-            <div class="space-x-4">
-              <button class="bg-green-600 text-white px-4 py-2 rounded-lg">Mark Complete</button>
-              <button class="bg-red-600 text-white px-4 py-2 rounded-lg">Delete</button>
-            </div>
-          </div>
-        </li>
-
-        <!-- Another Task Item -->
-        <li class="bg-gray-100 p-4 rounded-lg shadow">
-          <div class="flex justify-between items-center">
-            <div>
-              <p><strong>Task:</strong> Prepare feedback for Anna</p>
-              <p><strong>Due Date:</strong> Oct 25, 2024</p>
-            </div>
-            <div class="space-x-4">
-              <button class="bg-green-600 text-white px-4 py-2 rounded-lg">Mark Complete</button>
-              <button class="bg-red-600 text-white px-4 py-2 rounded-lg">Delete</button>
-            </div>
-          </div>
-        </li>
-
-        <!-- Additional tasks can go here in the same format -->
-        <li class="bg-gray-100 p-4 rounded-lg shadow">
-          <div class="flex justify-between items-center">
-            <div>
-              <p><strong>Task:</strong> Grade project for Mike</p>
-              <p><strong>Due Date:</strong> Oct 28, 2024</p>
-            </div>
-            <div class="space-x-4">
-              <button class="bg-green-600 text-white px-4 py-2 rounded-lg">Mark Complete</button>
-              <button class="bg-red-600 text-white px-4 py-2 rounded-lg">Delete</button>
-            </div>
-          </div>
-        </li>
-      </ul>
-
-      <!-- Back to Dashboard -->
-      <a href="dashboard.html" class="text-blue-600 mt-4 inline-block">Back to Dashboard</a>
+  <div class="content">
+    <div class="task-item">
+      <h3>Review assignment from Sarah</h3>
+      <p>Due Date: Oct 22, 2024</p>
     </div>
-  </main>
-
+    <div class="task-item">
+      <h3>Prepare feedback for Anna</h3>
+      <p>Due Date: Oct 25, 2024</p>
+    </div>
+    <div class="task-item">
+      <h3>Grade project for Mike</h3>
+      <p>Due Date: Oct 30, 2024</p>
+    </div>
+    <div class="task-item">
+      <h3>Check on Jane's progress</h3>
+      <p>Due Date: Nov 1, 2024</p>
+    </div>
+    <div class="task-item">
+      <h3>Finalize materials for workshop</h3>
+      <p>Due Date: Nov 5, 2024</p>
+    </div>
+    <button onclick="window.history.back()">Go Back</button>
+  </div>
 </body>
 </html>

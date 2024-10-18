@@ -1,64 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mentorship Session Details</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: #1d8cd7;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .content {
+      padding: 20px;
+    }
+    button {
+      background-color: #1d8cd7;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #155a8a;
+    }
+  </style>
 </head>
-<body class="bg-gray-100">
-
-  <!-- Header -->
-  <header class="bg-blue-700 p-4 text-white">
-    <h1 class="text-xl font-bold">Mentorship Session Details</h1>
+<body>
+  <header class="header">
+    <h1>Mentorship Session Details</h1>
   </header>
-
-  <!-- Main Content -->
-  <main class="p-6">
-    <div class="bg-white p-6 rounded-lg shadow-lg">
-      <!-- Mentorship Info -->
-      <h2 class="text-2xl font-semibold mb-4">Mentorship Session with Jane Doe</h2>
-      <p class="text-gray-600 mb-4">Scheduled for Oct 20, 2024, at 10:00 AM</p>
-
-      <!-- Student Details -->
-      <div class="mb-6">
-        <h3 class="text-lg font-semibold mb-2">Student Information</h3>
-        <ul class="text-gray-600">
-          <li><strong>Name:</strong> Jane Doe</li>
-          <li><strong>Email:</strong> jane.doe@example.com</li>
-          <li><strong>Current Progress:</strong> 75%</li>
-        </ul>
-      </div>
-
-      <!-- Session Objectives -->
-      <div class="mb-6">
-        <h3 class="text-lg font-semibold mb-2">Session Objectives</h3>
-        <p class="text-gray-600">
-          - Review progress on the latest assignment.<br>
-          - Discuss areas of difficulty and improvement.<br>
-          - Plan for the upcoming project.
-        </p>
-      </div>
-
-      <!-- Resources Section -->
-      <div class="mb-6">
-        <h3 class="text-lg font-semibold mb-2">Resources</h3>
-        <ul class="text-gray-600">
-          <li><a href="#" class="text-blue-600">Assignment 1 Review (PDF)</a></li>
-          <li><a href="#" class="text-blue-600">Project Planning Document (Word)</a></li>
-        </ul>
-      </div>
-
-      <!-- Reschedule Option -->
-      <div class="mb-6">
-        <h3 class="text-lg font-semibold mb-2">Reschedule Session</h3>
-        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg">Request Reschedule</button>
-      </div>
-
-      <!-- Back to Dashboard -->
-      <a href="dashboard.html" class="text-blue-600">Back to Dashboard</a>
-    </div>
-  </main>
-
+  <div class="content">
+    <h2>Session with Jane Doe</h2>
+    <p>Date: Oct 20, 2024</p>
+    <p>Time: 3:00 PM</p>
+    <p>Topics to Discuss: Project Updates, Challenges, and Next Steps</p>
+    <button onclick="window.history.back()">Go Back</button>
+  </div>
 </body>
 </html>
