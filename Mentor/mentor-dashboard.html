@@ -89,7 +89,7 @@
     <a href="#">Analytics</a>
   </nav>
   <main class="main-content">
-    <h2>Welcome, John!</h2>
+    <h2 id="welcome-message">Welcome, Mentor!</h2> <!-- Placeholder for the mentor name -->
     <div class="task-card">
       <h3>Upcoming Mentorship Session</h3>
       <p>Mentorship session with Jane Doe scheduled for Oct 20, 2024.</p>
@@ -123,6 +123,9 @@
     function viewTasks() {
       window.location.href = 'all_tasks.html';
     }
+
+    // Display mentor's name from localStorage
+    document.getElementById("welcome-message").textContent = `Welcome, ${localStorage.getItem('mentorName')}!`;
   </script>
 </body>
 </html>
