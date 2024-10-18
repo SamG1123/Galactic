@@ -51,9 +51,9 @@
                 alert(`Welcome, ${result.user.username}! You are logged in as a ${result.role}.`);
                 // Redirect based on role
                 if (result.role === "student") {
-                    window.location.href = "student-dashboard.html";
+                    window.location.href = "Student/student-dashboard.html";
                 } else {
-                    window.location.href = "mentor-dashboard.html";
+                    window.location.href = "Mentor/mentor-dashboard.html";
                 }
             } else {
                 alert("Invalid username or password. Please try again.");
