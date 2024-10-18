@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-blue-700 p-4 text-white">
+    <h1 class="text-xl font-bold">Messages</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="p-6">
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+      <!-- Message List -->
+      <h2 class="text-2xl font-semibold mb-4">All Messages</h2>
+      <ul class="space-y-4">
+        <!-- Message Item -->
+        <li class="bg-gray-100 p-4 rounded-lg shadow">
+          <div class="flex justify-between items-center">
+            <div>
+              <p><strong>From:</strong> Jane Doe</p>
+              <p><strong>Message:</strong> Can we reschedule our session?</p>
+            </div>
+            <div class="space-x-4">
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg">Reply</button>
+              <button class="bg-red-600 text-white px-4 py-2 rounded-lg">Delete</button>
+            </div>
+          </div>
+        </li>
+
+        <!-- Another Message Item -->
+        <li class="bg-gray-100 p-4 rounded-lg shadow">
+          <div class="flex justify-between items-center">
+            <div>
+              <p><strong>From:</strong> Mike Smith</p>
+              <p><strong>Message:</strong> Thank you for the feedback!</p>
+            </div>
+            <div class="space-x-4">
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg">Reply</button>
+              <button class="bg-red-600 text-white px-4 py-2 rounded-lg">Delete</button>
+            </div>
+          </div>
+        </li>
+
+        <!-- Additional messages can go here in the same format -->
+        <li class="bg-gray-100 p-4 rounded-lg shadow">
+          <div class="flex justify-between items-center">
+            <div>
+              <p><strong>From:</strong> Anna Johnson</p>
+              <p><strong>Message:</strong> I’m struggling with the assignment...</p>
+            </div>
+            <div class="space-x-4">
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg">Reply</button>
+              <button class="bg-red-600 text-white px-4 py-2 rounded-lg">Delete</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Back to Dashboard -->
+      <a href="dashboard.html" class="text-blue-600 mt-4 inline-block">Back to Dashboard</a>
+    </div>
+  </main>
+
+</body>
+</html>
