@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #34495e;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #34495e;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Profile Picture Section */
+        .profile-pic {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-pic img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .profile-pic input[type="file"] {
+            display: none;
+        }
+
+        .profile-pic label {
+            background-color: #18bc9c;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Button Styles */
+        .button {
+            background-color: #18bc9c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .button:hover {
+            background-color: #16a085;
+        }
+
+        .reset-btn {
+            background-color: #e74c3c;
+        }
+
+        .reset-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .social-media input {
+            width: 48%;
+        }
+
+        .back-btn {
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #18bc9c;
+            font-size: 16px;
+        }
+
+        .back-btn:hover {
+            color: #16a085;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Edit Profile</h1>
+
+    <!-- Profile Picture Section -->
+    <div class="profile-pic">
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" id="profilePicPreview">
+        <label for="profilePicInput">Change Profile Picture</label>
+        <input type="file" id="profilePicInput" accept="image/*">
+    </div>
+
+    <!-- Profile Edit Form -->
+    <form id="profileForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" value="Dr. Smith">
+        </div>
+
+        <div class="form-group">
+            <label for="experience">Experience</label>
+            <input type="text" id="experience" value="10+ years">
+        </div>
+
+        <div class="form-group">
+            <label for="expertise">Expertise</label>
+            <input type="text" id="expertise" value="AI, Data Science">
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="form-group">
+            <label>Social Media Links</label>
+            <div class="social-media">
+                <input type="text" id="linkedin" placeholder="LinkedIn URL">
+                <input type="text" id="twitter" placeholder="Twitter URL">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="bio">Bio</label>
+            <textarea id="bio" rows="4" placeholder="Short bio...">Experienced data scientist specializing in AI.</textarea>
+        </div>
+
+        <button type="submit" class="button">Save Changes</button>
+        <button type="reset" class="button reset-btn">Reset Fields</button>
+    </form>
+
+    <a href="dashboard.html" class="back-btn">Back to Dashboard</a>
+</div>
+
+<script>
+// Handle profile picture upload
+document.getElementById('profilePicInput').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+        document.getElementById('profilePicPreview').src = e.target.result;
+    };
+
+    if (file) {
+        reader.readAsDataURL(file);
+    }
+});
+
+// Handle form submission
+document.getElementById('profileForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent page reload
+
+    // Get updated values
+    const name = document.getElementById('name').value;
+    const experience = document.getElementById('experience').value;
+    const expertise = document.getElementById('expertise').value;
+    const linkedin = document.getElementById('linkedin').value;
+    const twitter = document.getElementById('twitter').value;
+    const bio = document.getElementById('bio').value;
+
+    // Simulate saving profile (you can extend this to save in a database or local storage)
+    alert('Profile updated:\n' + 
+          Name: ${name}\nExperience: ${experience}\nExpertise: ${expertise}\n +
+          LinkedIn: ${linkedin}\nTwitter: ${twitter}\nBio: ${bio});
+
+    // Redirect back to dashboard (optional)
+    window.location.href = 'dashboard.html';
+});
+
+// Handle reset button
+document.querySelector('.reset-btn').addEventListener('click', function() {
+    document.getElementById('profilePicPreview').src = 'https://via.placeholder.com/150';
+});
+</script>
+
+</body>
+</html>
