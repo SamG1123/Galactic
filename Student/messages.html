@@ -26,14 +26,14 @@
   <main class="main-content">
     <h2>Your Messages</h2>
     <div class="message-card">
-      <h3>From: Jane Doe</h3>
+      <h3>From: Prof. Birmohan</h3>
       <p>Can we reschedule our session?</p>
-      <button onclick="viewDetails('message')">View Details</button>
+      <button>View Details</button>
     </div>
     <div class="message-card">
-      <h3>From: Mike Smith</h3>
+      <h3>From: Mr. Jagdeep Singh</h3>
       <p>Thank you for the feedback!</p>
-      <button onclick="viewDetails('message')">View Details</button>
+      <button>View Details</button>
     </div>
   </main>
 
@@ -42,12 +42,6 @@
       localStorage.removeItem('studentName');
       window.location.href = 'loginpage.html';
     }
-
-    function viewDetails(type) {
-      window.location.href = type + '_details.html';
-    }
-
-    document.getElementById("welcome-message").textContent = `Welcome, ${localStorage.getItem('studentName')}!`;
   </script>
 </body>
 </html>

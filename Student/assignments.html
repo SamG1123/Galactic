@@ -28,12 +28,12 @@
     <div class="assignment-card">
       <h3>Complete Project Report</h3>
       <p>Due Date: Oct 25, 2024.</p>
-      <button onclick="viewDetails('project')">View Details</button>
+      <button>View Details</button>
     </div>
     <div class="assignment-card">
       <h3>Prepare for Upcoming Test</h3>
       <p>Due Date: Oct 30, 2024.</p>
-      <button onclick="viewDetails('test')">View Details</button>
+      <button>View Details</button>
     </div>
   </main>
 
@@ -42,12 +42,5 @@
       localStorage.removeItem('studentName');
       window.location.href = 'loginpage.html';
     }
-
-    function viewDetails(type) {
-      window.location.href = type + '_details.html';
-    }
-
-    document.getElementById("welcome-message").textContent = `Welcome, ${localStorage.getItem('studentName')}!`;
-  </script>
 </body>
 </html>

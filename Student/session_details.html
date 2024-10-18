@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Session Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>Session Details</h1>
+    <div>
+      <input type="text" placeholder="Search..." />
+      <button onclick="logout()">Logout</button>
+    </div>
+  </header>
+  <nav class="sidebar">
+    <h2>Menu</h2>
+    <a href="student_dashboard.html"><i class="fas fa-home"></i><span>Dashboard</span></a>
+    <a href="schedule.html"><i class="fas fa-calendar"></i><span>Schedule</span></a>
+    <a href="assignments.html"><i class="fas fa-book"></i><span>Assignments</span></a>
+    <a href="messages.html"><i class="fas fa-envelope"></i><span>Messages</span></a>
+    <a href="analytics.html"><i class="fas fa-chart-bar"></i><span>Analytics</span></a>
+  </nav>
+
+  <main class="main-content">
+    <h2>Mentorship Session with Mentor</h2>
+    <div class="session-details-card">
+      <h3>Session Information</h3>
+      <p><strong>Date:</strong> Oct 20, 2024</p>
+      <p><strong>Time:</strong> 3:00 PM - 4:00 PM</p>
+      <p><strong>Location:</strong> Online (Zoom Link)</p>
+      <p><strong>Agenda:</strong> Discuss project progress and address any questions.</p>
+    </div>
+
+    <div class="calendar">
+      <h3>Session Calendar</h3>
+      <div class="calendar-grid">
+        <div class="calendar-header">Sun</div>
+        <div class="calendar-header">Mon</div>
+        <div class="calendar-header">Tue</div>
+        <div class="calendar-header">Wed</div>
+        <div class="calendar-header">Thu</div>
+        <div class="calendar-header">Fri</div>
+        <div class="calendar-header">Sat</div>
+
+        <div class="calendar-cell"></div>
+        <div class="calendar-cell"></div>
+        <div class="calendar-cell"></div>
+        <div class="calendar-cell"></div>
+        <div class="calendar-cell"></div>
+        <div class="calendar-cell">1</div>
+        <div class="calendar-cell">2</div>
+        <div class="calendar-cell">3</div>
+        <div class="calendar-cell">4</div>
+        <div class="calendar-cell">5</div>
+        <div class="calendar-cell">6</div>
+        <div class="calendar-cell">7</div>
+        <div class="calendar-cell">8</div>
+        <div class="calendar-cell">9</div>
+        <div class="calendar-cell">10</div>
+        <div class="calendar-cell">11</div>
+        <div class="calendar-cell">12</div>
+        <div class="calendar-cell">13</div>
+        <div class="calendar-cell">14</div>
+        <div class="calendar-cell">15</div>
+        <div class="calendar-cell">16</div>
+        <div class="calendar-cell">17</div>
+        <div class="calendar-cell">18</div>
+        <div class="calendar-cell">19</div>
+        <div class="calendar-cell active-session">20</div>
+        <div class="calendar-cell">21</div>
+        <div class="calendar-cell">22</div>
+        <div class="calendar-cell">23</div>
+        <div class="calendar-cell">24</div>
+        <div class="calendar-cell">25</div>
+        <div class="calendar-cell">26</div>
+        <div class="calendar-cell">27</div>
+        <div class="calendar-cell">28</div>
+        <div class="calendar-cell">29</div>
+        <div class="calendar-cell">30</div>
+        <div class="calendar-cell">31</div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function logout() {
+      localStorage.removeItem('studentName');
+      window.location.href = 'loginpage.html';
+    }
+
+    document.getElementById("welcome-message").textContent = `Welcome, ${localStorage.getItem('studentName')}!`;
+  </script>
+</body>
+</html>
