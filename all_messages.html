@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Messages</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: #1d8cd7;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .content {
+      padding: 20px;
+    }
+    .message-item {
+      background-color: white;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .sender {
+      font-weight: bold;
+    }
+    .message {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    button {
+      background-color: #1d8cd7;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #155a8a;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>All Messages</h1>
+  </header>
+  <div class="content">
+    <div class="message-item">
+      <span class="sender">Jane Doe:</span>
+      <div class="message">Can we reschedule our session?</div>
+      <p><small>Received: Oct 15, 2024</small></p>
+    </div>
+    <div class="message-item">
+      <span class="sender">Mike Smith:</span>
+      <div class="message">Thank you for the feedback!</div>
+      <p><small>Received: Oct 14, 2024</small></p>
+    </div>
+    <div class="message-item">
+      <span class="sender">Anna Johnson:</span>
+      <div class="message">I’m struggling with the assignment...</div>
+      <p><small>Received: Oct 13, 2024</small></p>
+    </div>
+    <div class="message-item">
+      <span class="sender">Sarah Lee:</span>
+      <div class="message">Can we meet to discuss my project?</div>
+      <p><small>Received: Oct 12, 2024</small></p>
+    </div>
+    <div class="message-item">
+      <span class="sender">Mark Brown:</span>
+      <div class="message">Looking forward to your feedback!</div>
+      <p><small>Received: Oct 11, 2024</small></p>
+    </div>
+    <button onclick="window.history.back()">Go Back</button>
+  </div>
+</body>
+</html>
