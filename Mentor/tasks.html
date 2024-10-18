@@ -33,16 +33,8 @@
     <div class="task-card">
       <h3>Prepare Feedback for Anna</h3>
       <p>Due date: Oct 23, 2024.</p>
-      <button onclick="viewDetails('feedback')">View Details</button>
+      <button>View Details</button>
     </div>
   </main>
-
-  <script>
-    function viewDetails(type) {
-      window.location.href = type + '_details.html';
-    }
-
-    document.getElementById("welcome-message").textContent = `Welcome, ${localStorage.getItem('mentorName')}!`;
-  </script>
 </body>
 </html>

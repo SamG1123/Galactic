@@ -11,7 +11,7 @@
     <h1>Mentor Dashboard</h1>
     <div>
       <input type="text" placeholder="Search..." />
-      <button>Logout</button>
+      <button onclick="logout()">Logout</button>
     </div>
   </header>
   <nav class="sidebar">
@@ -52,14 +52,19 @@
     }
 
     function viewMessages() {
-      window.location.href = 'all_messages.html';
+      window.location.href = 'messages.html';
     }
 
     function viewTasks() {
-      window.location.href = 'all_tasks.html';
+      window.location.href = 'tasks.html';
     }
 
     document.getElementById("welcome-message").textContent = `Welcome, ${localStorage.getItem('mentorName')}!`;
+    
+    function logout() {
+      localStorage.removeItem('mentorName');
+      window.location.href = '../loginpage.html';
+    }
   </script>
 </body>
 </html>

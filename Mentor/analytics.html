@@ -30,16 +30,10 @@
       <h3>Mentorship Sessions Overview</h3>
       <p>Total Sessions Conducted: 20</p>
       <p>Average Feedback Rating: 4.8/5</p>
-      <button onclick="viewDetails('analytics')">View Details</button>
+      <button>View Details</button>
     </div>
   </main>
 
-  <script>
-    function viewDetails(type) {
-      window.location.href = type + '_details.html';
-    }
 
-    document.getElementById("welcome-message").textContent = `Welcome, ${localStorage.getItem('mentorName')}!`;
-  </script>
 </body>
 </html>
