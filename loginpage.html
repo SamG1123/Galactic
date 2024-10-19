@@ -52,9 +52,9 @@
             // Store the mentor's name in localStorage if they are a mentor
             if (result.role === "mentor") {
                 localStorage.setItem('mentorName', result.user.username);
-                window.location.href = "Mentor/mentor-dashboard.html"; // Redirect to mentor dashboard
+                window.location.href = "mentor/mentor-dashboard.html"; // Redirect to mentor dashboard
             } else {
-                window.location.href = "Student/student-dashboard.html"; // Redirect to student dashboard
+                window.location.href = "student/student_dashboard.html"; // Redirect to student dashboard
             }
         } else {
             alert("Invalid username or password. Please try again.");
