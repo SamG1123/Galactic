@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Assignments</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>Student Assignments</h1>
+    <div>
+      <input type="text" placeholder="Search..." />
+      <button onclick="logout()">Logout</button>
+    </div>
+  </header>
+  <nav class="sidebar">
+    <h2>Menu</h2>
+    <a href="student_dashboard.html"><i class="fas fa-home"></i><span>Dashboard</span></a>
+    <a href="schedule.html"><i class="fas fa-calendar"></i><span>Schedule</span></a>
+    <a href="#" class="active"><i class="fas fa-book"></i><span>Assignments</span></a>
+    <a href="messages.html"><i class="fas fa-envelope"></i><span>Messages</span></a>
+    <a href="analytics.html"><i class="fas fa-chart-bar"></i><span>Analytics</span></a>
+  </nav>
+
+  <main class="main-content">
+    <h2>Your Assignments</h2>
+    <div class="assignment-card">
+      <h3>Complete Project Report</h3>
+      <p>Due Date: Oct 25, 2024.</p>
+      <button>View Details</button>
+    </div>
+    <div class="assignment-card">
+      <h3>Prepare for Upcoming Test</h3>
+      <p>Due Date: Oct 30, 2024.</p>
+      <button>View Details</button>
+    </div>
+  </main>
+
+  <script>
+    function logout() {
+      localStorage.removeItem('studentName');
+      window.location.href = 'loginpage.html';
+    }
+</body>
+</html>

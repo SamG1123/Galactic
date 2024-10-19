@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Schedule</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>Student Schedule</h1>
+    <div>
+      <input type="text" placeholder="Search..." />
+      <button onclick="logout()">Logout</button>
+    </div>
+  </header>
+  <nav class="sidebar">
+    <h2>Menu</h2>
+    <a href="student_dashboard.html"><i class="fas fa-home"></i><span>Dashboard</span></a>
+    <a href="#" class="active"><i class="fas fa-calendar"></i><span>Schedule</span></a>
+    <a href="assignments.html"><i class="fas fa-book"></i><span>Assignments</span></a>
+    <a href="messages.html"><i class="fas fa-envelope"></i><span>Messages</span></a>
+    <a href="analytics.html"><i class="fas fa-chart-bar"></i><span>Analytics</span></a>
+  </nav>
+
+  <main class="main-content">
+    <h2>Your Schedule</h2>
+    <div class="schedule-card">
+      <h3>Upcoming Session with Mentor</h3>
+      <p>Date: Oct 20, 2024, Time: 3:00 PM - 4:00 PM</p>
+      <button onclick="viewDetails('session')">View Details</button>
+    </div>
+    <div class="schedule-card">
+      <h3>Exam Preparation Meeting</h3>
+      <p>Date: Oct 22, 2024, Time: 2:00 PM - 3:00 PM</p>
+      <button onclick="viewDetails('meeting')">View Details</button>
+    </div>
+  </main>
+
+  <script>
+    function logout() {
+      localStorage.removeItem('studentName');
+      window.location.href = 'loginpage.html';
+    }
+
+    function viewDetails(type) {
+      window.location.href = type + '_details.html';
+    }
+
+    document.getElementById("welcome-message").textContent = `Welcome, ${localStorage.getItem('studentName')}!`;
+  </script>
+</body>
+</html>

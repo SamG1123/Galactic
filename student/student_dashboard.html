@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dashboard</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .dashboard-header {
+      background-color: #1d8cd7;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-sizing: border-box;
+    }
+
+    .dashboard-header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .dashboard-header input {
+      padding: 10px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      width: 200px;
+      margin-right: 20px;
+    }
+
+    .dashboard-header button {
+      background-color: #ff4d4d;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .dashboard-header button:hover {
+      background-color: #e60000;
+    }
+
+    .sidebar {
+      background-color: #2c3e50;
+      color: white;
+      width: 65px;
+      height: 100vh;
+      padding: 20px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transition: width 0.3s ease;
+      z-index: 1001;
+    }
+
+    .sidebar:hover {
+      width: 240px;
+    }
+
+    .sidebar h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    .sidebar a {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      color: white;
+      text-decoration: none;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      opacity: 0;
+      margin-left: -30px;
+      transition: opacity 0.3s ease, margin-left 0.3s ease;
+    }
+
+    .sidebar:hover a {
+      opacity: 1;
+      margin-left: 0;
+    }
+
+    .sidebar a:hover {
+      background-color: #34495e;
+    }
+
+    .sidebar a.active {
+      background-color: #1d8cd7;
+    }
+
+    .sidebar a i {
+      margin-right: 10px;
+    }
+
+    .main-content {
+      margin-left: 80px;
+      padding: 80px 40px;
+      transition: margin-left 0.3s ease;
+    }
+
+    .sidebar:hover + .main-content {
+      margin-left: 260px;
+    }
+
+    .main-content h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #1d8cd7;
+    }
+
+    .mentor-section {
+      margin-bottom: 40px;
+    }
+
+    .mentor-card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .mentor-card h3 {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .mentor-card p {
+      color: #555;
+      text-align: center;
+      margin: 0;
+    }
+
+    .mentor-card button {
+      background-color: #1d8cd7;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .mentor-card button:hover {
+      background-color: #155a8a;
+    }
+  </style>
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>Student Dashboard</h1>
+    <div>
+      <input type="text" placeholder="Search..." />
+      <button onclick="logout()">Logout</button>
+    </div>
+  </header>
+  <nav class="sidebar">
+    <h2>Menu</h2>
+    <a href="#" class="active"><i class="fas fa-home"></i><span>Dashboard</span></a>
+    <a href="schedule.html"><i class="fas fa-calendar"></i><span>Schedule</span></a>
+    <a href="assignments.html"><i class="fas fa-book"></i><span>Assignments</span></a>
+    <a href="messages.html"><i class="fas fa-envelope"></i><span>Messages</span></a>
+    <a href="analytics.html"><i class="fas fa-chart-bar"></i><span>Analytics</span></a>
+  </nav>
+
+  <main class="main-content">
+    <h2>Available Mentors</h2>
+
+    <div class="mentor-section">
+      <h3>Professors</h3>
+      <div class="mentor-card">
+        <h3>Prof. Birmohan</h3>
+        <p><a href="http://cs.sliet.ac.in/people/birmohan/" target="_blank">View Profile</a></p>
+      </div>
+      <div class="mentor-card">
+        <h3>Prof. Daman</h3>
+        <p><a href="http://cs.sliet.ac.in/people/daman/" target="_blank">View Profile</a></p>
+      </div>
+      <div class="mentor-card">
+        <h3>Prof. Major</h3>
+        <p><a href="http://cs.sliet.ac.in/people/major/" target="_blank">View Profile</a></p>
+      </div>
+      <div class="mentor-card">
+        <h3>Ms. Sachan</h3>
+        <p><a href="http://cs.sliet.ac.in/people/msachan/" target="_blank">View Profile</a></p>
+      </div>
+    </div>
+
+    <div class="mentor-section">
+      <h3>Associate Professors</h3>
+      <div class="mentor-card">
+        <h3>Prof. Gurjinder</h3>
+        <p><a href="http://cs.sliet.ac.in/people/gurjinder/" target="_blank">View Profile</a></p>
+      </div>
+    </div>
+
+    <div class="mentor-section">
+      <h3>Assistant Professors</h3>
+      <div class="mentor-card">
+        <h3>Mr. Amarnath</h3>
+        <p><a href="http://cs.sliet.ac.in/people/amarnath/" target="_blank">View Profile</a></p>
+      </div>
+      <div class="mentor-card">
+        <h3>Mr. Jagdeep Singh</h3>
+        <p><a href="http://cs.sliet.ac.in/people/jagdeepsingh/" target="_blank">View Profile</a></p>
+      </div>
+      <div class="mentor-card">
+        <h3>Mr. Manminder</h3>
+        <p><a href="http://cs.sliet.ac.in/people/manminder/" target="_blank">View Profile</a></p>
+      </div>
+      <div class="mentor-card">
+        <h3>Ms. Preet</h3>
+        <p><a href="http://cs.sliet.ac.in/people/preet/" target="_blank">View Profile</a></p>
+      </div>
+      <div class="mentor-card">
+        <h3>Mr. Tajinder Singh</h3>
+        <p><a href="http://cs.sliet.ac.in/people/tajindersingh/" target="_blank">View Profile</a></p>
+      </div>
+      <div class="mentor-card">
+        <h3>Mr. Utkarsh</h3>
+        <p><a href="http://cs.sliet.ac.in/people/utkarsh/" target="_blank">View Profile</a></p>
+      </div>
+      <div class="mentor-card">
+        <h3>Mr. Vinod Verma</h3>
+        <p><a href="http://cs.sliet.ac.in/people/vinodverma/" target="_blank">View Profile</a></p>
+      </div>
+      <div class="mentor-card">
+        <h3>Mr. Jaspal</h3>
+        <p><a href="http://cs.sliet.ac.in/people/jaspal/" target="_blank">View Profile</a></p>
+      </div>
+      <div class="mentor-card">
+        <h3>Mr. Rahul</h3>
+        <p><a href="http://cs.sliet.ac.in/people/rahul/" target="_blank">View Profile</a></p>
+      </div>
+    </div>
+
+    <div class="mentor-section">
+      <h3>Assistant Professors (Contract)</h3>
+      <div class="mentor-card">
+        <h3>Mr. Jatinderpal</h3>
+        <p><a href="http://cs.sliet.ac.in/people/jatinderpal/" target="_blank">View Profile</a></p>
+      </div>
+      <div class="mentor-card">
+        <h3>Mr. Sukhpreet</h3>
+        <p><a href="http://cs.sliet.ac.in/people/sukhpreet/" target="_blank">View Profile</a></p>
+      </div>
+    </div>
+
+    <div class="mentor-section">
+      <h3>Part-time Teachers</h3>
+      <div class="mentor-card">
+        <h3>Mr. Chinu</h3>
+        <p><a href="http://cs.sliet.ac.in/people/chinu/" target="_blank">View Profile</a></p>
+      </div>
+      <div class="mentor-card">
+        <h3>Mr. Vikash</h3>
+        <p><a href="http://cs.sliet.ac.in/people/vikash/" target="_blank">View Profile</a></p>
+      </div>
+      <div class="mentor-card">
+        <h3>Ms. Sunita Rani</h3>
+        <p><a href="http://cs.sliet.ac.in/people/sunitarani/" target="_blank">View Profile</a></p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function logout() {
+      localStorage.removeItem('studentName');
+      window.location.href = 'loginpage.html';
+    }
+
+    document.getElementById("welcome-message").textContent = `Welcome, ${localStorage.getItem('studentName')}!`;
+  </script>
+</body>
+</html>
